@@ -1,21 +1,60 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularze</title>
+    <title>Forms playground</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 class="main-heading">Forms Playground</h1>
-    <form>
-        <p>
-            <label for="">Your name:</label>
-            <input id="firstName" name="firstName" type="text">
-        </p>
-    </form>
+    <main>
+        <h1 class="main-heading">Forms Playground</h1>
+        <form class="form">
+            <p>
+                <label for="firstName">Your first name:
+                    <input class="form__input" placeholder="Enter your first name" value="Jarek" id="firstName"
+                        name="firstName" type="text"></label>
+            </p>
+            <p>
+                <label for="lastName">Your last name:
+                    <input class="form__input" placeholder="Enter your last name" id="lastName" name="lastName"
+                        type="text">
+                </label></p>
+            <fieldset>
+                <legend>Adress</legend>
+                <p>
+                    <label for="streetName">Street name:
+                        <input class="form__input" placeholder="Enter street name" id="streetName" name="streetName"
+                            type="text">
+                    </label>
+                </p>
+                <p>
+                    <label for="city">City:
+                        <input class="form__input" placeholder="Enter your city" id="city" name="city" type="text">
+                    </label></p>
+            </fieldset>
+            <fieldset>
+                <legend>Favourite icecream flavour</legend>
+                <p>
+                    <label>
+                        <input name="iceCream" type="radio" value="chocolate">Chocolate
+                    </label>
+                    <label>
+                        <!-- atrybut "checked" = zaznaczony -->
+                        <input name="iceCream" type="radio" value="strawberry">Strawberry
+                    </label>
+                    <label>
+                        <input name="iceCream" type="radio" value="lemon">Lemon
+                    </label>
+                </p>
+            </fieldset>
+            <p>
+                <label for=""><input name="agreement" type="checkbox" value="agree">I agree</label>
+            </p>
+        </form>
+    </main>
 </body>
 
 </html>
